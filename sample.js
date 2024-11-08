@@ -1,13 +1,13 @@
 'use strict'
-//declarar las variables usando var(descontinuado) - let - const
-// let user
-// let age
-// let isStudent
+/* declarar las variables usando var(descontinuado) - let - const
+let user
+let age
+let isStudent */
 
-//asignacion
-// user = 'Pepe'
-// age = 22
-// isStudent = true
+/* asignacion
+user = 'Pepe'
+age = 22
+isStudent = true */
 
 //EL ESTANDAR ES: DECLARACIÓN + ASIGNACIÓN
 let user = 'Pepe'
