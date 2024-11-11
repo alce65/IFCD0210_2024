@@ -1,0 +1,18 @@
+{
+  "name": "des_app_web_prologo",
+  "version": "1.0.0",
+  "description": "Documentación Certificado de Profesionalidad IFCD0210 - Desarrollo de aplicaciones con tecnologías web.",
+  "main": "sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
