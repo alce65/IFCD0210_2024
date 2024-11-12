@@ -128,21 +128,83 @@ guessNumber();
 guessNumberII(); */
 
 // 12.- Crea una función que reciba un número como parámetro e imprima por consola si el número dado es par o impar.
-/* function evenOrOdd(a) {
-    if (a % 2 === 0) {
-        console.log(`${a} es un número PAR`);
-    } else {
-        console.log(`${a} es un número IMPAR`);
+function evenOrOdd(num) {
+    // EJEMPLO DE PROGRAMAMCIÓN DEFENSIVA: Se debe de utilizar para evitar anidar bloques dentro de bloques
+    // SI NO ES ENTERO
+    if (!Number.isInteger(num)) {
+        return `${num} no es un número ENTERO`;
     }
+    let result = `${num} es un número IMPAR`;
+    if (num % 2 === 0) {
+        result = `${num} es un número PAR`;
+    }
+    return result;
 }
-evenOrOdd(10); */
+render(evenOrOdd(0.5));
+render(evenOrOdd(2));
+render(evenOrOdd(Infinity));
+console.log(
+    '------------------------------------------------------------------------------------'
+);
 
-// Crea una función que reciba un parámetro de tipo string e imprima por consola el string revertido. (ejemplo: 'casa' => 'asac).
+// 13.- Crea una función que reciba un parámetro de tipo string e imprima por consola el string revertido. (ejemplo: 'casa' => 'asac).
 function reverseChain(cad) {
-    return cad.split('').reverse().join('');
+    // return cad.split('').reverse().join(''); -> Forma reducida usando métodos
+    // forma usando bucles con acumuladores e iteraciones
+    let accumulator = '';
+    for (let i = cad.length - 1; i >= 0; i--) {
+        const iterator = cad[i];
+        accumulator += iterator;
+    }
+    return accumulator;
 }
-render(reverseChain('Renato Malca'));
+render(reverseChain('Carmen de Mairena'));
+console.log(
+    '------------------------------------------------------------------------------------'
+);
 
 // Crea una función que imprima por consola la tabla de multiplicar de un número introducido como parámetro.
+function multiplicationTable(num) {
+    let accumulator = 0;
+    for (i = 0; i <= 10; i++) {
+        accumulator = num * i;
+        render(`${num} x ${i} = ${accumulator}`);
+    }
+    return accumulator;
+}
+multiplicationTable(2);
+
+console.log(
+    '------------------------------------------------------------------------------------'
+);
 
 // Crea una función que reciba un número por parámetros e imprima por consola si el número recibido es un número primo.
+function isPrimeNumber(num) {
+    // Si no es menor o igual de 0
+    if (!Number.isInteger(num) || num <= 0) {
+        return `El número ${num} es un valor NO VÁLIDO`;
+    }
+
+    if (num < 2) return false;
+
+    // ES PRIMO SI: ES MAYOR QUE 1 Y SI TIENE 2 DIVISORES DISTINTO: EL MISMO Y 1
+    for (let i = 2; i < num / 2; i++) {
+        // num % i = num%2, num%3, num%4, num%..., num%num-1
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+function renderIsPrimeNumber(num) {
+    let result = isPrimeNumber(num);
+    if (typeof result === 'boolean') {
+        result = result ? 'Es primo' : 'No es primo';
+    }
+    console.log(num, result);
+}
+
+renderIsPrimeNumber(-1);
+renderIsPrimeNumber(0);
+renderIsPrimeNumber(1);
+renderIsPrimeNumber(2);
+renderIsPrimeNumber(9);
