@@ -159,20 +159,43 @@ function reverseChain(cad) {
     return accumulator;
 }
 render(reverseChain('Carmen de Mairena'));
+
+console.log(
+    '------------------------------------------------------------------------------------'
+);
+
+// Haremos lo mismo que el 13 pero usando métodos de string
+function revertStringByArray(value = '') {
+    /* Manera con variables:
+    const array = value.split();
+    array.reverse();
+    const result = array.join('');
+    return result; */
+
+    // Usando FLUENT
+    return value.split('').reverse().join('');
+}
+render(revertStringByArray('Leticia Sabater'));
+
 console.log(
     '------------------------------------------------------------------------------------'
 );
 
 // Crea una función que imprima por consola la tabla de multiplicar de un número introducido como parámetro.
 function multiplicationTable(num) {
-    let accumulator = 0;
+    /*     let accumulator = 0;
     for (i = 0; i <= 10; i++) {
         accumulator = num * i;
         render(`${num} x ${i} = ${accumulator}`);
     }
+    return accumulator; */
+    let accumulator = [];
+    for (let i = 0; i <= 10; i++) {
+        accumulator.push(`${num} X ${i} = ${num * i}`);
+    }
     return accumulator;
 }
-multiplicationTable(2);
+console.table(multiplicationTable(2));
 
 console.log(
     '------------------------------------------------------------------------------------'
