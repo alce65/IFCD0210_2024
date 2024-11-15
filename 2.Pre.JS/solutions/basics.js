@@ -165,6 +165,7 @@ console.log(
 );
 
 // Haremos lo mismo que el 13 pero usando métodos de string
+// Si queremos usar esta función en otros ficheros debemos de colocar un 'export' al inicio de la funcion
 function revertStringByArray(value = '') {
     /* Manera con variables:
     const array = value.split();
