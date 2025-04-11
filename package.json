@@ -13,8 +13,5 @@
     "license": "ISC",
     "prettier": {
         "singleQuote": true
-    },
-    "devDependencies": {
-        "husky": "^9.1.7"
     }
 }
