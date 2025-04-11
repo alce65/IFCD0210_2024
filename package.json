@@ -6,7 +6,8 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Warning: No test specified\" && exit 0",
-        "prepare": "husky"
+        "prepare": "husky",
+        "lint": "echo \"Warning: Linter not specified\" && exit 0"
     },
     "keywords": [],
     "author": "",
