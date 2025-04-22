@@ -6,15 +6,12 @@
     "type": "module",
     "scripts": {
         "test": "echo \"Warning: No test specified\" && exit 0",
-        "prepare": "husky"
+        "lint": "echo \"Warning: Linter not specified\" && exit 0"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "prettier": {
         "singleQuote": true
-    },
-    "devDependencies": {
-        "husky": "^9.1.7"
     }
 }
