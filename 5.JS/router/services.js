@@ -1,4 +1,4 @@
-import TASKS from '../data/tasks.json' with {type: 'json'};
+import TASKS from './data/tasks.json' with {type: 'json'};
 
 function getData(url) {
     return fetch(url)

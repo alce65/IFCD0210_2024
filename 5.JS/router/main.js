@@ -1,4 +1,4 @@
-import { createHeader } from '../components/header.js';
+import { createHeader } from './components/header.js';
 import { loadAbout } from './about/about.js';
 import { createFooter } from './components/footer.js';
 import { createMenu } from './components/menu.js';
