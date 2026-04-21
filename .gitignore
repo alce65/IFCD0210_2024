@@ -2,7 +2,6 @@
 _entregas
 uploads
 
-*-lock.json
 *.code-workspace
 .vscode
 
